@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using VianorKyustendil.Web.Areas.Identity.Data;
+using VianorKyustendil.Data.Models;
 
 namespace VianorKyustendil.Web.Areas.Identity.Pages.Account.Manage
 {

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using VianorKyustendil.Web.Areas.Identity.Data;
+using VianorKyustendil.Data.Models;
 
-namespace VianorKyustendil.Web.Models
+namespace VianorKyustendil.Data
 {
     public class VianorKyustendilContext : IdentityDbContext<VianorKyustendilUser>
     {

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using VianorKyustendil.Web.Areas.Identity.Data;
+using VianorKyustendil.Data.Models;
 
 namespace VianorKyustendil.Web.Areas.Identity.Pages.Account
 {

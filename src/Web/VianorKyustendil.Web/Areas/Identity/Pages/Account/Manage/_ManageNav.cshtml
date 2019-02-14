@@ -1,4 +1,5 @@
-﻿@inject SignInManager<VianorKyustendilUser> SignInManager
+﻿@using VianorKyustendil.Data.Models
+@inject SignInManager<VianorKyustendilUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }

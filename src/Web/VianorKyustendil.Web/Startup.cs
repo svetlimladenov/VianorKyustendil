@@ -12,7 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using VianorKyustendil.Web.Areas.Identity.Data;
+using VianorKyustendil.Data;
+using VianorKyustendil.Data.Models;
 using VianorKyustendil.Web.Models;
 
 namespace VianorKyustendil.Web

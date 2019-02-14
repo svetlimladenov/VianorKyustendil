@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
-namespace VianorKyustendil.Web.Areas.Identity.Data
+namespace VianorKyustendil.Data.Models
 {
     // Add profile data for application users by adding properties to the VianorKyustendilUser class
     public class VianorKyustendilUser : IdentityUser
