@@ -9,13 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VianorKyustendil.Web", "Web
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6BF5A8DF-C317-4BDE-B59A-4543B46E216D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VianorKyustendil.Data", "Data\VianorKyustendil.Data\VianorKyustendil.Data.csproj", "{843D29DE-3613-4E1E-9726-A6AFFEF989C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VianorKyustendil.Data", "Data\VianorKyustendil.Data\VianorKyustendil.Data.csproj", "{843D29DE-3613-4E1E-9726-A6AFFEF989C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VianorKyustendil.Data.Models", "Data\VianorKyustendil.Data.Models\VianorKyustendil.Data.Models.csproj", "{3B7B32D3-A956-42E4-A19C-1EF0DFDCD964}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VianorKyustendil.Data.Models", "Data\VianorKyustendil.Data.Models\VianorKyustendil.Data.Models.csproj", "{3B7B32D3-A956-42E4-A19C-1EF0DFDCD964}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5941B84E-467F-46F0-9DAC-CB867CE65800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Tests\Sandbox\Sandbox.csproj", "{B8ECF6DE-B780-4004-89DB-29F81ABDF055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sandbox", "Tests\Sandbox\Sandbox.csproj", "{B8ECF6DE-B780-4004-89DB-29F81ABDF055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VianorKyustendil.Data.Core", "Data\VianorKyustendil.Data.Core\VianorKyustendil.Data.Core.csproj", "{C7F52806-05EE-46CD-9D95-622CCF5F7BA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B8ECF6DE-B780-4004-89DB-29F81ABDF055}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8ECF6DE-B780-4004-89DB-29F81ABDF055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8ECF6DE-B780-4004-89DB-29F81ABDF055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F52806-05EE-46CD-9D95-622CCF5F7BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F52806-05EE-46CD-9D95-622CCF5F7BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F52806-05EE-46CD-9D95-622CCF5F7BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F52806-05EE-46CD-9D95-622CCF5F7BA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{843D29DE-3613-4E1E-9726-A6AFFEF989C3} = {6BF5A8DF-C317-4BDE-B59A-4543B46E216D}
 		{3B7B32D3-A956-42E4-A19C-1EF0DFDCD964} = {6BF5A8DF-C317-4BDE-B59A-4543B46E216D}
 		{B8ECF6DE-B780-4004-89DB-29F81ABDF055} = {5941B84E-467F-46F0-9DAC-CB867CE65800}
+		{C7F52806-05EE-46CD-9D95-622CCF5F7BA9} = {6BF5A8DF-C317-4BDE-B59A-4543B46E216D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6CDE198-120E-4A5C-85A3-FB5FF5826417}

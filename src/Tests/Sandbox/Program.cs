@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using VianorKyustendil.Data;
+using VianorKyustendil.Data.Core;
 
 namespace Sandbox
 {
@@ -43,6 +44,9 @@ namespace Sandbox
             services.AddDbContext<VianorKyustendilContext>(options =>
                 options.UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+
         }
 
     }
