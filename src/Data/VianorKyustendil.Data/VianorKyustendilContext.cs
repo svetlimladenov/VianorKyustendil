@@ -11,12 +11,26 @@ namespace VianorKyustendil.Data
         {
         }
 
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
+
+            builder.Entity<VianorKyustendilUser>()
+                .Property(x => x.Country)
+                .HasDefaultValue("Bulgaria");
+
+            builder.Entity<OrderDetail>()
+                .HasKey(x => new { x.OrderId, x.ProductId });
+
+
             base.OnModelCreating(builder);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
         }
     }
 }

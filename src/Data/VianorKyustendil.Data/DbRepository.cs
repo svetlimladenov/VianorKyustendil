@@ -31,7 +31,7 @@ namespace VianorKyustendil.Data
         }
 
         public void Delete(TEntity entity)
-        {
+        {   
             this.dbSet.Remove(entity);
         }
 

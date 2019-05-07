@@ -10,7 +10,7 @@ using VianorKyustendil.Web.Models;
 
 namespace VianorKyustendil.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly IRepository<VianorKyustendilUser> userRepository;
 
@@ -21,7 +21,7 @@ namespace VianorKyustendil.Web.Controllers
         public IActionResult Index()
         {
             var usersCount = userRepository.All().Count();
-            ViewData["UsersCount"] = $"This app has {usersCount}";
+            ViewData["UsersCount"] = $"This app has {usersCount} users";
             return View();
         }
 
