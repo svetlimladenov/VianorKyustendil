@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using VianorKyustendil.Data;
 using VianorKyustendil.Data.Core;
+using VianorKyustendil.Data.Models;
 
 namespace Sandbox
 {
@@ -29,9 +30,31 @@ namespace Sandbox
 
         private static void SandboxCode(IServiceProvider serviceProvider)
         {
+             
             var db = serviceProvider.GetService<VianorKyustendilContext>();
             Console.WriteLine(db.Users.Count());
             //TODO: Code here
+
+            //var category = db.Categories.FirstOrDefault(x => x.Name == "variable");
+            //if (category == null)
+            //{
+            //    category = new Category
+            //    {
+            //        Name = "variable"
+            //    };
+            //}
+
+
+            //Alert : I dont need to add the new category manualy, ef core will detect if its a new obj and will do add it auto by itself !
+
+            //var product = new Product
+            //{
+            //    Category = category,
+            //    ProductName = "variable"
+            //};
+
+            //db.Products.Add(product);
+            //db.SaveChanges();
         }
 
         private static void ConfigureServices(ServiceCollection services)

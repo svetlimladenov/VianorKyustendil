@@ -129,6 +129,26 @@ namespace VianorKyustendil.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("VianorKyustendil.Data.Models.Article", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("AuthorId");
+
+                    b.Property<string>("Content");
+
+                    b.Property<string>("CoverImageUrl");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("Articles");
+                });
+
             modelBuilder.Entity("VianorKyustendil.Data.Models.Category", b =>
                 {
                     b.Property<string>("Id")
@@ -314,6 +334,13 @@ namespace VianorKyustendil.Data.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("VianorKyustendil.Data.Models.Article", b =>
+                {
+                    b.HasOne("VianorKyustendil.Data.Models.VianorKyustendilUser", "Author")
+                        .WithMany("Articles")
+                        .HasForeignKey("AuthorId");
                 });
 
             modelBuilder.Entity("VianorKyustendil.Data.Models.Order", b =>

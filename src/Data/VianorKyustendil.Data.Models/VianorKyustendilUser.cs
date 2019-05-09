@@ -11,6 +11,7 @@ namespace VianorKyustendil.Data.Models
         public VianorKyustendilUser()
         {
             this.Orders = new HashSet<Order>();
+            this.Articles = new HashSet<Article>();
         }
 
         public string FirstName { get; set; }
@@ -26,5 +27,7 @@ namespace VianorKyustendil.Data.Models
         public string JobTitle { get; set; }
 
         public ICollection<Order> Orders { get; set; }
+
+        public ICollection<Article> Articles { get; set; }
     }
 }

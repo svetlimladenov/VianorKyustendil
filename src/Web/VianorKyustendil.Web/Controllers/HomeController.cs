@@ -13,10 +13,12 @@ namespace VianorKyustendil.Web.Controllers
     public class HomeController : BaseController
     {
         private readonly IRepository<VianorKyustendilUser> userRepository;
+        private readonly IRepository<Product> productsRepository;
 
-        public HomeController(IRepository<VianorKyustendilUser> userRepository)
+        public HomeController(IRepository<VianorKyustendilUser> userRepository, IRepository<Product> productsRepository)
         {
             this.userRepository = userRepository;
+            this.productsRepository = productsRepository;
         }
         public IActionResult Index()
         {
@@ -27,6 +29,7 @@ namespace VianorKyustendil.Web.Controllers
 
         public IActionResult Privacy()
         {
+            ViewBag.ProductsCount = this.productsRepository.All().Count();
             return View();
         }
 
