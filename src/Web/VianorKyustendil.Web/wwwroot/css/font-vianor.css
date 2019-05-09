@@ -1,0 +1,32 @@
+﻿@font-face {
+    font-family: "Font-Vianor";
+    src: url('../fonts/Raiderfont.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "Font-I";
+    src: url('../fonts/concielianbreaksemital.ttf') format("truetype");
+}
+
+:root {
+    --logo-font-size: 30px;
+}
+
+.logo-text {
+    font-family: "Font-Vianor";
+    color: #F26722;
+    font-weight: bold;
+    font-size: var(--logo-font-size);
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.i-letter-font {
+    font-family: "Font-I";
+    margin-left: -0.16em;
+    font-size: calc(var(--logo-font-size) + 6.5px);
+}
+
+.logo-svg {
+    width: 40%;
+}
