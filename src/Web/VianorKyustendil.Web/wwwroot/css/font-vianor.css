@@ -9,7 +9,7 @@
 }
 
 :root {
-    --logo-font-size: 30px;
+    --logo-font-size: 2em;
 }
 
 .logo-text {
@@ -19,14 +19,66 @@
     font-size: var(--logo-font-size);
     letter-spacing: -1px;
     margin: 0;
+    /*position: fixed;
+    left: 40%;
+    top: 0.5%;*/
 }
 
 .i-letter-font {
     font-family: "Font-I";
     margin-left: -0.16em;
-    font-size: calc(var(--logo-font-size) + 6.5px);
+    font-size: calc(var(--logo-font-size) - 0.65em);
 }
 
 .logo-svg {
     width: 40%;
+}
+
+
+
+.nav-flex {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .nav-flex {
+        display: block;
+    }
+
+    .logo-wrapper {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .logo-text {
+        left: 37.5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    :root { --logo-font-size: 20px; }
+
+    .i-letter-font { font-size: calc(var(--logo-font-size) + 6px); }
+}
+
+.small-resolution-logo {
+    display: none;
+}
+
+@media screen and (max-width: 575px) {
+    .small-resolution-logo > .logo-wrapper {
+        display: block;
+    }
+    .small-resolution-logo {
+        display: block;
+        position: absolute;
+        left: 29%;
+        top: 6%;
+    }
 }
