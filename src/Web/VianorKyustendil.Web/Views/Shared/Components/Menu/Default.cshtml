@@ -1,0 +1,8 @@
+﻿@model System.Collections.Generic.List<VianorKyustendil.Web.Components.MenuItemViewModel>
+
+@foreach (var menuItem in Model)
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="@menuItem.Url">@menuItem.Title</a>
+    </li>
+}

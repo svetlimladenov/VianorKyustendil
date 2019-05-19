@@ -1,0 +1,17 @@
+﻿<h1>Hello from Administration Area</h1>
+
+@using (Html.BeginForm("Search", "Articles", FormMethod.Post))
+{
+    @Html.TextArea("username")
+    <input type="submit"/>
+}
+
+<h1 asp-name="Goshe"></h1>
+
+
+@*@section MenuItems
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="https://google.com/">Google</a>
+    </li>
+}*@

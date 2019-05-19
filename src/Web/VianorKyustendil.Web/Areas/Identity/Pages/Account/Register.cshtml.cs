@@ -4,11 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using VianorKyustendil.Data.Models;
 
 namespace VianorKyustendil.Web.Areas.Identity.Pages.Account
@@ -20,23 +22,40 @@ namespace VianorKyustendil.Web.Areas.Identity.Pages.Account
         private readonly UserManager<VianorKyustendilUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IHostingEnvironment hostingEnvironment;
+
 
         public RegisterModel(
             UserManager<VianorKyustendilUser> userManager,
             SignInManager<VianorKyustendilUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IHostingEnvironment hostingEnvironment)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            this.hostingEnvironment = hostingEnvironment;
         }
 
         [BindProperty]
         public InputModel Input { get; set; }
 
         public string ReturnUrl { get; set; }
+
+        public bool AreWeHiring
+        {
+            get
+            {
+                var webRootPath = this.hostingEnvironment.WebRootPath;
+                var JSONFile = System.IO.File.ReadAllText(webRootPath + "/configuration/TyreServiceConfiguration.json");
+                var JSON = JObject.Parse(JSONFile);
+                var areWeHiring = JSON.First.ToObject<bool>();
+                return areWeHiring;
+            }
+        }
+
 
         public class InputModel
         {

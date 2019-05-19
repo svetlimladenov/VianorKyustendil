@@ -16,6 +16,7 @@ using VianorKyustendil.Data;
 using VianorKyustendil.Data.Core;
 using VianorKyustendil.Data.Models;
 using VianorKyustendil.Web.Models;
+using VianorKyustendil.Web.Services.HomeServices;
 
 namespace VianorKyustendil.Web
 {
@@ -58,6 +59,7 @@ namespace VianorKyustendil.Web
 
             //Application services
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+            services.AddScoped<IVianorServices, VianorServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,6 +85,11 @@ namespace VianorKyustendil.Web
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
