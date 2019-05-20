@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: "Font-I";
-    src: url('../fonts/concielianbreaksemital.ttf') format("truetype");
+    src: url('../fonts/FontVianor.ttf') format("truetype");
 }
 
 :root {
@@ -61,10 +61,14 @@
     }
 }
 
-@media screen and (max-width: 767px) {
-    :root { --logo-font-size: 20px; }
+@media screen and (max-width: 890px) {
+    :root {
+        --logo-font-size: 20px;
+    }
 
-    .i-letter-font { font-size: calc(var(--logo-font-size) + 6px); }
+    .i-letter-font {
+        font-size: calc(var(--logo-font-size) + 6px);
+    }
 }
 
 .small-resolution-logo {
@@ -75,6 +79,7 @@
     .small-resolution-logo > .logo-wrapper {
         display: block;
     }
+
     .small-resolution-logo {
         display: block;
         position: absolute;
