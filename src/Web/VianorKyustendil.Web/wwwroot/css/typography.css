@@ -1,19 +1,27 @@
-﻿html{
-    /* font-size: 16px;
-    line-height: 1.5;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
+﻿/*Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+}
 
+/* Box Sizing */
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+/* Typography */
+html{
     font: 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
 }
 
 p{
     margin: 0 auto;
-    padding-bottom: 1.2em; /*  1em == 16 px bcs html has 16 px set */
-}
-
-p {
-    margin: 0 auto;
-    padding-bottom: 1em; /*  1em == 16 px bcs html has 16 px set */
+    padding-bottom: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
